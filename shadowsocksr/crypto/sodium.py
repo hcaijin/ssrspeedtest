@@ -41,9 +41,9 @@ BLOCK_SIZE = 64
 def load_libsodium():
     global loaded, libsodium, buf
 
-    libsodium = CDLL(os.path.join(lib_path, 'lib', 'libsodium.so'))
-    # libsodium = util.find_library('sodium', 'crypto_stream_salsa20_xor_ic',
-    #                               'libsodium')
+    #  libsodium = CDLL(os.path.join(lib_path, 'lib', 'libsodium.so'))
+    libsodium = util.find_library('sodium', 'crypto_stream_salsa20_xor_ic',
+                                 'libsodium')
     if libsodium is None:
         raise Exception('libsodium not found')
 

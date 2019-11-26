@@ -45,8 +45,8 @@ def load_libsodium():
 
     # from ctypes.util import find_library
     for p in ('sodium',):
-        # libsodium_path = find_library(p)
-        libsodium_path = os.path.join(lib_path, 'lib', 'libsodium.so')
+        libsodium_path = find_library(p)
+        #  libsodium_path = os.path.join(lib_path, 'lib', 'libsodium.so')
         if libsodium_path:
             break
     if not libsodium_path:
